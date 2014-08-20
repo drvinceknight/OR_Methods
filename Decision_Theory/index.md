@@ -1,7 +1,7 @@
 ---
 layout   : page
 title    : Decision Theory
-comments : false
+comments : true
 ---
 
 The main 4 topics considered in this part of the course:

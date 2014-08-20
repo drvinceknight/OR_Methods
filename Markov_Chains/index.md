@@ -1,7 +1,7 @@
 ---
 layout   : page
 title    : Markov Chains
-comments : false
+comments : true
 ---
 
 The main 3 topics considered in this part of the course:
