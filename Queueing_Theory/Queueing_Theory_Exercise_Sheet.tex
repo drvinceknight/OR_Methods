@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Queueing Theory Exercise Sheet}
+\end{center}
+
+\begin{enumerate}
+\item Fill in the gaps in the following table:
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+\hline
+Statistic& Notation & $M/M/1$ & $M/M/2$ & $M/M/k$ \\\hline
+Number of people in queue  &  &          &         \\
+Number of people in system &  &          &         \\
+Average waiting time in queue &  &          &         \\
+Average time in system &  &          &
+\end{tabular}
+\end{center}
+
+\item There are $n$ customers waiting for service and their service times are (in order of arrival) $1,2,3,\dots,n$. Show that when the service discipline is FIFO, the average waiting time for the customers is:
+    $${n^2-1\over6}$$
+    and that when the service discipline is LIFO, the average waiting time for the customers is
+    $${n^2-1\over3}$$
+
+\item Show that the Poisson distribution:
+$${(\lambda t)^ne^{-\lambda t}\over n!}\text{ for }n\in\mathbb{Z}_{\geq0}$$
+has a mean of $\lambda t$.\\
+Arrivals at a certain queue form a Poisson process with arrival rate of 24 customers per hour. Compute the probabilities that exactly 0,1,2,3 customers will arrive during a 5 minute period.\\
+The system deals with arrivals in batches every 5 minutes, and has problems if there have been more than 3 arrivals in the past 5 minutes. What is the probability of this occurring?
+
+\item Show that the Exponential distribution:
+$${(\lambda )e^{-\lambda t}}\text{ for }t\in\mathbb{R}_{\geq0}$$
+has a mean of ${1\over \lambda}$.\\
+The service times of a certain server are exponentially distributed with a rate of 36 customers per hour. What is the probability that a given service time is:
+\begin{itemize}
+\item Less than 1 minute
+\item Less that 2 minutes
+\item More than 2 minutes
+\end{itemize}
+
+\item A small petrol filling station has one pump only and two further waiting spaces for vehicles. Vehicles arrive at random (a Poisson Process), and the service times are exponential.
+    \begin{itemize}
+    \item If the number of vehicles at the station is used to represent the state of the system, write down a Markov chain model for the system and give its rate matrix.
+    \item Show that in steady state, the probability that there are $i$ vehicles at the station is given by:
+        $$\pi_i={\rho^i\over 1+\rho+\rho^2+\rho^3}\text{ for }i\in\mathbb{Z}_{\geq0}$$
+        where $\rho$ is the ratio of the mean arrival rate to the mean service rate. Hence find the mean number of vehicles at the station.
+    \end{itemize}
+
+\item A single server queue has exponential inter-arrival and service times with mean ${1\over\lambda}$ and ${1\over\mu}$ respectively. Suppose that new customers are sensitive to the length of the queue, such that if there are $i$ customers in the system when a customer arrives, then that customer will join the queue with a probability of ${1\over i+1}$, otherwise he/she departs and does not return. Find the steady state probability distribution of this queueing system.
+
+\item Suppose that in a large machine repairing company, workers must get their tools from the tool centre, which is staffed by a single person.\\
+
+Let the mean number of workers asking for tools be 5 per hour, and let the average time taken to handle one request for tools be 10 minutes. The server is paid 5 dollars per hour and each worker is paid 8 dollars per hour.\\
+
+Now, the server complains that he/she is overloaded and that many workers waste their time queueing for tools. Accordingly, the senior manager wonders if it is cost effective to employ an extra server at the tool centre.\\
+
+Assuming that the inter-arrival time of workers and the processing time of the servers are exponentially distributed, write down a Markov model for the existing system. Use the number of workers waiting for tools as the state.\\
+
+From the model, determine the average number of workers waiting for tools at the tool centre (including the worker being served). Use this to calculate the average cost per hour of providing tools. This will include the cost of time lost by the workers, and the cost of employing the tool distributor.\\
+
+Repeat your analysis, supposing that there are now two tool centres (each with a tool distributor) and see if employing a second distributor is justified.
+
+\item Customers arriving at the local burger drive-through takeaway place orders at an intercom, then drive up to the service window to pay and receive their order. At present there is a single-queue single-channel operation run by two employees, one filling the order while the other takes money from the customer. The number of cars arriving in a given interval follows a Poisson distribution with mean 24 cars per hour. The average time taken to serve a car is exponentially distributed with a mean of 1.25 minutes.\\
+
+    It is proposed that a single-queue two-channel operation be used instead, with two service windows. One employee is positioned at each window and takes and fills the order for customers arriving at the window. The service time is exponential with a mean of 2 minutes for either channel.\\
+
+    Compute the following characteristics, and recommend if the new proposal should be implemented:
+    \begin{itemize}
+    \item The probability that there are no cars at the drive through at all, at any given moment.
+    \item The average number of cars waiting for service.
+    \item The average waiting time for service.
+    \item The average time spent by a car in the system.
+    \item The average number of cars in the system.
+    \item The probability that an arrival has to wait for service.
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document} 

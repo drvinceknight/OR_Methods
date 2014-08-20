@@ -1,0 +1,14 @@
+# Site settings
+title: OR Methods
+email: vincent.knight@gmail.com
+description: "The class site for MAT001 OR Methods"
+baseurl: "/OR_Methods"
+url: "http://drvinceknight.github.io/"
+github_username: "drvinceknight"
+twitter_username: "@drvinceknight"
+plus_username: "+VincentKnight"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: pygments

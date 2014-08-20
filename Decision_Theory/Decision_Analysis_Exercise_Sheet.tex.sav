@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Decision Theory Exercise Sheet}
+\end{center}
+
+\begin{enumerate}
+\item Assume that 2 pizza companies: \emph{Drafts} and \emph{Pizza shack} are two competing firms. They are both about to embark on a \emph{small}, \emph{medium} or \emph{large} advertising campaign. Pizza shack believes that it is equally likely that Drafts will undertake a \emph{small}, \emph{medium} or \emph{large} advertising campaign. Given the actions chosen by each restaurant, Pizza shack's profits are given by the following table:
+    \begin{center}
+    \begin{tabular}{@{}l|c|c|c@{}}
+                       &D. chooses small& D. chooses medium& D. chooses large\\\hline
+    P.s. chooses small &4000            &3000              &2000\\
+    P.s. chooses medium&5000            &6000              &1000\\
+    P.s. chooses large &9000            &2000              &0\\
+    \end{tabular}
+    \end{center}
+    Use the following three approaches to inform Pizza shack's decision:
+    \begin{itemize}
+    \item MaxMin
+    \item Maximum likelihood
+    \item Maximum expected
+    \end{itemize}
+
+\item Using the previous example. Assume Pizza shack has the option of paying a fixed cost of $C$ to conduct some industrial espionage. The espionage predicts that Drafts will choose the size of the advertising campaign with the following probabilities:
+     \begin{center}
+    \begin{tabular}{@{}l|c@{}}
+                       &Probability\\\hline
+    D. chooses small &$20\%$            \\
+    D. chooses medium&$10\%$              \\
+    D. chooses large &$70\%$             \\
+    \end{tabular}
+    \end{center}
+    Importantly the espionage is accurate with the following probabilities (if the prediction is incorrect assume that the other two options are equally likely):
+     \begin{center}
+    \begin{tabular}{@{}l|c@{}}
+                             &Probability of being correct\\\hline
+    Espionage predicts small &$90\%$            \\
+    Espionage predicts medium&$95\%$              \\
+    Espionage predicts large &$70\%$             \\
+    \end{tabular}
+    \end{center}
+    Use a decision tree to find the value of $C$ that justifies using espionage.
+
+\item Consider the coin flipping example from the lecture notes: you are offered the opportunity of flipping a coin. If you choose to not flip you get a reward of £4 \textbf{thousand}. If you flip and the coin falls on \emph{heads} you get a reward of £10 \textbf{thousand}. If you flip and the coin falls on \emph{tails} you get nothing.''}
+ 
+ Use the general utility function $u:\mathbb{R}_{\geq0}\to\mathbb{R}_{\geq0}$ defined by:
+    $$u(x)=x^{1\over n}\text{ for some }n\in\mathbb{Z}$$
+    to find a set of utility functions that give a risk-averse strategy. Does this hold if the rewards were £4 \textbf{million} and £10 \textbf{million}? What is the important factor that determines the value of $n$?
+    
+\item Consider the utility function $u:\mathbb{R}_{\geq0}\to\mathbb{R}_{\geq0}$ defined by:
+$$u(x)=\sqrt{x+2000}$$
+\end{enumerate}
+
+
+\end{document} 

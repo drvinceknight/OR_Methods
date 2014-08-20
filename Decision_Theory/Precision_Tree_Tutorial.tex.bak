@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Decision Tree Analysis using Precision Tree}
+\end{center}
+In this lab session we will learn to use software to build decision trees. We will create the decision tree for the following situation:\\
+
+\emph{``You are offered the opportunity of flipping a coin. If you choose to not flip you get a reward of £4 thousand. If you flip and the coin falls on \emph{heads} you get a reward of £10 thousand. If you flip and the coin falls on \emph{tails} you get nothing.''}
+
+
+\begin{center}\framebox{\pspicture(0,0)(6,5)
+%\psgrid(0,0)(11,6)
+\rput(0,2.75){\pspolygon[linecolor=blue](0,.5)(.5,.5)(.5,0)(0,0)}
+\rput(3,2){\pscircle[linecolor=red](0,0){.25}}
+\psline(.5,3)(2.75,4)
+\psline(.5,3)(2.75,2)
+\psline(3.25,2)(5.25,3)
+\psline(3.25,2)(5.25,1)
+\rput(1.2,3.85){\blue{Don't Flip}}
+\rput(1.5,2){\blue{Flip}}
+\rput(4,1.25){\blue{Tails}}
+\rput(4,2.8){\blue{Heads}}
+\rput(3,4.15){4000}
+\rput(5.4,3){10000}
+\rput(5.35,1){0}
+\rput(4.75,2.45){\blue{$.5$}}
+\rput(4.75,1.5){\blue{$.5$}}
+\rput(3,2.5){\green{5000}}
+\endpspicture}
+\end{center}
+
+Steps:
+\begin{itemize}
+\item Build the tree:
+\begin{enumerate}
+\item Open up the \emph{precision tree} package.
+\item Click on the Decision Tree icon and place the root of your tree anywhere in the worksheet.
+\item Create the decision node by double clicking the leaf of your tree. Modify the branch properties of your tree before finishing.
+\item Create the random event node by double clicking on the leaf of your Flip decision. Modify the branch properties of your tree before finishing.
+\end{enumerate}
+\item Analysis:
+\begin{enumerate}
+\item Click on the Decision Analysis icon and identify the suggested policy.
+\item Perform a two way Sensitivity Analysis by changing the returns for:
+\begin{itemize}
+\item \emph{not flipping} (currently £4 thousand), between 0 and £10 thousand.
+\item \emph{obtaining heads} (currently £10 thousand), between 0 and £10 thousand.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+
+If you have time attempt to build the following tree from the notes:
+
+\begin{center}
+\framebox{\pspicture(0,-2)(12.5,6)
+%\psgrid(0,-2)(11,6)
+\rput(0,2.75){\rnode{A}{\pspolygon[linecolor=blue](0,.5)(.5,.5)(.5,0)(0,0)}}
+\rput(3,5){\rnode{B}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(3,3){\rnode{C}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(3,1){\rnode{D}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(6,1.5){\rnode{E}{\pspolygon[linecolor=blue](0,.5)(.5,.5)(.5,0)(0,0)}}
+\rput(6,0){\rnode{F}{\pspolygon[linecolor=blue](0,.5)(.5,.5)(.5,0)(0,0)}}
+\rput(9,2.5){\rnode{G}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(9,1.5){\rnode{H}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(9,.5){\rnode{I}{\pscircle[linecolor=red](0,0){.25}}}
+\rput(9,-.5){\rnode{J}{\pscircle[linecolor=red](0,0){.25}}}
+\psline(.5,3)(2.75,5)
+\psline(.5,3)(2.75,3)
+\psline(.5,3)(2.75,1)
+\psline(3.25,5)(5.25,5.5)
+\psline(3.25,5)(5.25,4.5)
+\psline(3.25,3)(5.25,2.5)
+\psline(3.25,3)(5.25,3.5)
+\psline(3.25,1)(6,1.75)
+\psline(3.25,1)(6,.25)
+\psline(6.5,1.75)(8.75,2.5)
+\psline(6.5,1.75)(8.75,1.5)
+\psline(6.5,.25)(8.75,.5)
+\psline(6.5,.25)(8.75,-.5)
+\psline(9.25,2.5)(10.1,2.7)
+\psline(9.25,2.5)(10.1,2.2)
+\psline(9.25,1.5)(10.1,1.7)
+\psline(9.25,1.5)(10.1,1.2)
+\psline(9.25,.5)(10.1,.7)
+\psline(9.25,.5)(10.1,.2)
+\psline(9.25,-.5)(10.1,-.7)
+\psline(9.25,-.5)(10.1,-.2)
+\rput(1.5,4.5){\blue{Buy}}
+\rput(1.85,3.25){\blue{Don't Buy}}
+\rput(1.25,1.5){\blue{Advice}}
+\rput(6,5.5){\red{Stock $\uparrow$}}
+\rput(6,4.5){\red{Stock $\downarrow$}}
+\rput(6,2.5){\red{Stock $\uparrow$}}
+\rput(6,3.5){\red{Stock $\downarrow$}}
+\rput(4.25,1.75){\red{Told: Buy}}
+\rput(4,.25){\red{Told: Don't Buy}}
+\rput(7.75,2.5){\blue{Buy}}
+\rput(7.5,1.25){\blue{Don't Buy}}
+\rput(7.5,.5){\blue{Buy}}
+\rput(7.5,-.5){\blue{Don't Buy}}
+\rput(10.75,2.75){\red{Stock $\uparrow$}}
+\rput(10.75,2.25){\red{Stock $\downarrow$}}
+\rput(10.75,1.75){\red{Stock $\uparrow$}}
+\rput(10.75,1.25){\red{Stock $\downarrow$}}
+\rput(10.75,0.75){\red{Stock $\uparrow$}}
+\rput(10.75,0.25){\red{Stock $\downarrow$}}
+\rput(10.75,-.25){\red{Stock $\uparrow$}}
+\rput(10.75,-.75){\red{Stock $\downarrow$}}
+\rput(7,5.5){20}
+\rput(7.1,4.5){-20}
+\rput(7,2.5){0}
+\rput(7,3.5){0}
+\rput(12,2.75){20-C}
+\rput(12,2.25){-20-C}
+\rput(12,1.75){-C}
+\rput(12,1.25){-C}
+\rput(12,.75){20-C}
+\rput(12,.25){-20-C}
+\rput(12,-.25){-C}
+\rput(12,-.75){-C}
+\rput(4.5,5.5){\blue{.6}}
+\rput(4.5,4.5){\blue{.4}}
+\rput(4.5,3.5){\blue{.6}}
+\rput(4.5,2.5){\blue{.4}}
+\rput(5.6,1.9){\blue{.6}}
+\rput(5.6,0.1){\blue{.4}}
+\rput(9.5,2.75){\blue{.8}}
+\rput(9.5,2.15){\blue{.2}}
+\rput(9.5,1.75){\blue{.8}}
+\rput(9.5,1.15){\blue{.2}}
+\rput(9.5,.75){\blue{.3}}
+\rput(9.5,.15){\blue{.7}}
+\rput(9.5,-.25){\blue{.3}}
+\rput(9.5,-.85){\blue{.7}}
+\rput(8.9,.9){\green{-8-C}}
+\rput(8.9,-.1){\green{-C}}
+\rput(8.9,1.9){\green{-C}}
+\rput(8.9,2.9){\green{12-C}}
+\rput(6.2,.67){\green{-C}}
+\rput(6.2,2.15){\green{12-C}}
+\rput(3,5.4){\green{4}}
+\rput(3,3.4){\green{0}}
+\rput(3,1.4){\green{7.2-C}}
+\endpspicture}
+\end{center}
+
+
+\end{document} 

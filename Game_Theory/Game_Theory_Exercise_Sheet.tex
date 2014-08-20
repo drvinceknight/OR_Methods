@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Game Theory Exercise Sheet}\\
+\tiny{This sheet was updated on \today.}
+\end{center}
+
+\begin{enumerate}
+\item Find the pure Nash equilibria for the following games:
+
+$$
+\begin{array}{@{}c@{\hspace{2cm}}c@{}}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ &$s_1$      &$s_2$  &$s_3$   \\\hline
+$r_1$&$(6,3)$&$(2,2)$&$(2,2)$\\\hline
+$r_2$&$(4,0)$&$(0,3)$&$(4,5)$\\\hline
+$r_3$&$(2,3)$&$(3,4)$&$(3,2)$\\\hline
+\end{tabular}&
+\begin{tabular}{|c|c|c|}
+\hline
+ &$s_1$      &$s_2$    \\\hline
+$r_1$&$(7,-2)$&$(4,0)$\\\hline
+$r_2$&$(1,-5)$&$(0,-4)$\\\hline
+$r_3$&$(4,-1)$&$(3,-5)$\\\hline
+$r_4$&$(6,-7)$&$(4,-5)$\\\hline
+\end{tabular}\\[2mm]
+(a)&(b)\\[2mm]
+\begin{tabular}{|c|c|c|c|}
+\hline
+ &$s_1$      &$s_2$  &$s_3$  \\\hline
+$r_1$&$(160,2)$&$(205,2)$&$(44,2)$\\\hline
+$r_2$&$(175,1)$&$(180,.5)$&$(45,5)$\\\hline
+$r_3$&$(201,3)$&$(204,4)$&$(50,10)$\\\hline
+$r_4$&$(120,4)$&$(107,6)$&$(49,2)$\\\hline
+\end{tabular}&
+\begin{tabular}{|c|c|c|c|}
+\hline
+ &$s_1$      &$s_2$  &$s_3$  \\\hline
+$r_1$&$(0,0)$&$(-1,1)$&$(1,-1)$\\\hline
+$r_2$&$(1,-1)$&$(0,0)$&$(-1,1)$\\\hline
+$r_3$&$(-1,1)$&$(1,-1)$&$(0,0)$\\\hline
+\end{tabular}\\[2mm]
+(c)&(d)
+
+\end{array}
+$$
+
+For which games do you suspect not having identified all equilibria and why?
+
+\item The following game is known as the \emph{traveller's dilemna}:\\
+
+\emph{An airline loses two suitcases belonging to two different travelers. Both suitcases happen to be identical and contain identical antiques. An airline manager tasked to settle the claims of both travelers explains that the airline is liable for a maximum of £100 per suitcase, and in order to determine an honest appraised value of the antiques the manager separates both travelers so they can't confer, and asks them to write down the amount of their value at no less than £2 and no larger than £100. He also tells them that if both write down the same number, he will treat that number as the true dollar value of both suitcases and reimburse both travelers that amount. However, if one writes down a smaller number than the other, this smaller number will be taken as the true dollar value, and both travelers will receive that amount along with a bonus/malus: £2 extra will be paid to the traveler who wrote down the lower value and a £2 deduction will be taken from the person who wrote down the higher amount. The challenge is: what strategy should both travelers follow to decide the value they should write down?}
+
+\item Identify all the Nash equilibria for the classic game: \emph{Rock, Paper, Scissors}.
+
+\item Assume a fighter must find a bomb being transported on two different bombers. The two bombers fly in such a way such that the guns of bomber 2 gives more protection to bomber 1 than the guns of bomber 1 give to bomber 2. I.e. bomber 1 is the best protected plane:
+    \begin{itemize}
+    \item Bomber 1 has a 80\% chance of surviving an attack.
+    \item Bomber 2 has a 60\% chance of surviving an attack
+    \end{itemize}
+    The bomber must decide which plane to use to transport the bomb. The fighter must choose which plane to attack. The bi-matrix representation of this game is given below:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+\hline
+                       &Attack Bomber 1&Attack Bomber 2    \\\hline
+Transport with Bomber 1&$(80,-80)$     &$(100,-100)$\\\hline
+Transport with Bomber 2&$(100,-100)$   &$(60,-60)$\\\hline
+\end{tabular}
+    \end{center}
+
+    Identify all the Nash equilibria for this game.
+
+
+\item Using the equality of payoffs theorem identify all the Nash equilibria for the following games:
+
+$$\begin{array}{c@{\hspace{2cm}}c}
+\begin{tabular}{|c|c|c|}
+\hline
+ &$s_1$      &$s_2$     \\\hline
+$r_1$&$(0,0)$&$(2,1)$\\\hline
+$r_2$&$(1,2)$&$(0,0)$\\\hline
+\end{tabular}
+&
+\begin{tabular}{|c|c|c|}
+\hline
+ &$s_1$      &$s_2$     \\\hline
+$r_1$&$(3,3)$&$(3,2)$\\\hline
+$r_2$&$(2,2)$&$(5,6)$\\\hline
+$r_3$&$(0,3)$&$(6,1)$\\\hline
+\end{tabular}\\[2mm]
+(a)&(b)
+\end{array}
+$$
+
+\item Assume two pedestrians are walking on the same sidewalk, towards each other. Both
+pedestrians have two options to ensure they do not walk in to each other:
+\begin{itemize}
+\item Step left
+\item Step right
+\end{itemize}
+
+\begin{enumerate}
+\item Give a bi-matrix representation of this system.
+\item By clearly stating the technique you use, identify all pure Nash equilibria for this game.
+\item Using the equality of payoffs theorem, identify all Nash equilibria for this game.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

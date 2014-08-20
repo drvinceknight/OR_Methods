@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Decision Theory Exercise Sheet}\\
+\tiny{Last updated: \today.}
+\end{center}
+
+\begin{enumerate}
+\item A large pharmaceutical company must decide on 3 possible alternatives for investment:
+ \begin{itemize}
+\item Invest in the research of a drug that suppresses the symptoms of laughteritis (a disease that cause uncontrollable laughter).
+\item Invest in the research of a vaccination that prevent catching laughteritis.
+\item Invest in the more costly alternative of finding a drug that cures laughteritis.
+\end{itemize}
+There is a 15\% chance that a rival company is able to find a drug that cures laughteritis. The returns on investment are given by the following table:
+   \begin{center}
+    \begin{tabular}{@{}l|c|c|c@{}}
+                                &Rival finds cure& Rival doesn't find cure\\\hline
+   Invest in symptomatic relief &-10             &30              \\
+   Invest in vaccination        & 5              &60              \\
+   Invest in cure               &25              &40              \\
+    \end{tabular}
+    \end{center}
+
+        Use the following 5 approaches to inform the pharmaceutical company's decision:
+    \begin{itemize}
+    \item MaxMax
+    \item MaxMin
+    \item MinMax Regret
+    \item Maximum likelihood
+    \item Maximum expected
+    \end{itemize}
+
+
+
+\item Assume that 2 pizza companies: \emph{Drafts} and \emph{Pizza shack} are 2 competing firms. They are both about to embark on a \emph{small}, \emph{medium} or \emph{large} advertising campaign. Pizza shack believes that it is equally likely that Drafts will undertake a \emph{small}, \emph{medium} or \emph{large} advertising campaign. Given the actions chosen by each restaurant, Pizza shack's profits are given by the following table:
+    \begin{center}
+    \begin{tabular}{@{}l|c|c|c@{}}
+                       &D. chooses small& D. chooses medium& D. chooses large\\\hline
+    P.s. chooses small &4000            &3000              &2000\\
+    P.s. chooses medium&5000            &6000              &1000\\
+    P.s. chooses large &9000            &2000              &0\\
+    \end{tabular}
+    \end{center}
+    Use the following five approaches to inform Pizza shack's decision:
+    \begin{itemize}
+    \item MaxMax
+    \item MaxMin
+    \item MinMax Regret
+    \item Maximum likelihood
+    \item Maximum expected
+    \end{itemize}
+
+\item Using the previous example. Assume Pizza shack has the option of paying a fixed cost of $C$ to conduct some industrial espionage. The espionage predicts that Drafts will choose the size of the advertising campaign with the following probabilities:
+     \begin{center}
+    \begin{tabular}{@{}l|c@{}}
+                       &Probability\\\hline
+    D. chooses small &$20\%$            \\
+    D. chooses medium&$10\%$              \\
+    D. chooses large &$70\%$             \\
+    \end{tabular}
+    \end{center}
+    Importantly the espionage is accurate with the following probabilities (if the prediction is incorrect assume that the other two options are equally likely):
+     \begin{center}
+    \begin{tabular}{@{}l|c@{}}
+                             &Probability of being correct\\\hline
+    Espionage predicts small &$90\%$            \\
+    Espionage predicts medium&$95\%$              \\
+    Espionage predicts large &$70\%$             \\
+    \end{tabular}
+    \end{center}
+    Use a decision tree to find the value of $C$ that justifies using espionage.
+
+
+\item Bob's utility function for his assets is $u(x)=\sqrt{x+1000}$. Bob's car is valued at £7000. There is a $0.05$ chance that Bob's car is destroyed over any given year. How much should Bob be willing to pay for an insurance policy that would replace his car if it were destroyed?
+
+\item Consider the coin flipping example from the lecture notes: you are offered the opportunity of flipping a coin. If you choose to not flip you get a reward of £4 \textbf{thousand}. If you flip and the coin falls on \emph{heads} you get a reward of £10 \textbf{thousand}. If you flip and the coin falls on \emph{tails} you get nothing.
+
+ Use the general utility function $u:\mathbb{R}_{\geq0}\to\mathbb{R}_{\geq0}$ defined by:
+    $$u(x)=x^{1\over n}\text{ for some }n\in\mathbb{Z}$$
+    to find a set of utility functions that give a risk-averse strategy. Does this hold if the rewards were £4 \textbf{million} and £10 \textbf{million}? What is the important factor that determines the value of $n$?
+
+\item I wish to buy a second hand car. There is one for sale at a local dealer for £1200, which comes with a 3 month warranty (any faults appearing in the first 3 months will be fixed for free). There is another for sale privately for £800, which appears to be of similar condition, but which has no warranty.
+I estimate the probability of a fault occurring in the first 3 months of ownership as .5, and the cost of repairing such a fault to be £600. To help me decide whether or not to buy the privately advertised car, I can get the Automobile Association (AA) to check the car for me, at a cost of £50. I estimate that:
+
+$$P(\text{AA find fault}\;|\;\text{fault present})=.8$$
+$$P(\text{AA find fault}\;|\;\text{no fault present})=0$$
+
+\begin{itemize}
+\item Draw a decision tree representing the possible decisions and outcomes of this problem, with their respective costs and probabilities.
+\item Using a minimum expected cost criterion, decide whether I should buy from the dealer, buy privately, or get the AA to check the second hand car first.
+\end{itemize}
+
+\end{enumerate}
+
+
+\end{document}

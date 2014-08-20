@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Markov Chains Sage Sheet}\\
+\tiny{Last updated: \today.}
+\end{center}
+
+\begin{enumerate}
+\item Discrete Markov Chains\\
+Navigate to the Sage code snippet at: \url{http://interact.sagemath.org/node/39} and perhaps start a new Sage worksheet so that you can try a few of your own Sage commands.
+
+WARNING: The convention used in this code snippet is different to the notes. The columns sums add to 1 not the row sums. Keep this in mind as you work through it.
+
+\begin{enumerate}
+\item Using the default inputs, what is the steady state distribution associated with this Markov chain (try and use the Sage ``solve" command to verify this)?
+\item How long does it seem to take to arrive at that state (try and use Sage to verify this)?
+\end{enumerate}
+\item Continuous Markov Chains\\
+The evolution of a Continuous Markov Chain obeys the following differential equation:
+
+$${d\pi(t)\over dt}=\pi(t)Q$$
+which has solution:
+$$\pi(t)=\pi(0)e^{Qt}$$
+This requires the calculation of the exponential of a Matrix. This is not straightforward! One approach is to use the following formula:
+$$
+e^{M}=\mathbb{I}+\sum_{k=1}^{\infty}{M^k\over k!}
+$$
+Navigate to the Sage code snippet at \url{http://interact.sagemath.org/node/71} and experiment with the code to see how good this approach is.
+\begin{enumerate}
+\item Consider the following Markov Chain:
+$$Q=\begin{pmatrix}
+-3&3&0&0\\
+4&-7&3&0\\
+0&4&-7&3\\
+0&0&4&-4
+\end{pmatrix}$$
+\item Use the Sage ``solve" command to obtain the steady state probabilities for this Markov Chain.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
