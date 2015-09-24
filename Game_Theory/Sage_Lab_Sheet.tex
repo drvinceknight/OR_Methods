@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+
+%packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathdots}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[dvips]{color}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{lscape}
+%Margins etc...
+\setlength{\textheight}{240mm}
+\setlength{\topmargin}{-17mm} \setlength{\oddsidemargin}{-4mm}
+\setlength{\textwidth}{166mm} \setlength{\parindent}{0mm}
+\setlength{\marginparsep}{9mm} \setlength{\parskip}{3mm}
+
+\begin{document}
+\begin{center}
+\Huge{Exploring Mixed Strategies with Sage\\\tiny{This sheet was last updated \today.} }
+\end{center}
+
+The following instructions are demonstrated in this video: \url{https://www.youtube.com/watch?v=Jfz9pU_2oHM&feature=youtu.be}:
+
+\begin{enumerate}
+    \item Create an account at \url{https://cloud.sagemath.com/}.
+    \item Copy the worksheet at
+        \url{https://cloud.sagemath.com/projects/2caafc5b-408d-46cd-be4f-db5d1cb06886/files/game_theory_demo.sagews} in to your own project.
+    \item If it's helpful this video explains most of the process
+        \url{https://www.youtube.com/watch?v=QjXAvRiU4Og}.
+\end{enumerate}
+
+Using the code there solve the following games, confirm these results using the
+equality of payoffs theorem:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$7,3$&$4,1$\\\hline
+$1,2$&$6,4$\\
+\hline
+\end{tabular}
+
+\quad
+
+\begin{tabular}{|c|c|}
+\hline
+$-4,3$&$4,2$\\\hline
+$1,2$&$-3,4$\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$1,-1$&$-1,1$\\\hline
+$-1,2$&$1,-1$\\
+\hline
+\end{tabular}
+
+\quad
+
+\begin{tabular}{|c|c|}
+\hline
+$1,-1$&$-1,1$\\\hline
+$-1,1$&$1,-1$\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

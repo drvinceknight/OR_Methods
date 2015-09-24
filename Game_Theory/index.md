@@ -15,5 +15,4 @@ Here is the material for the Game Theory part of MAT001:
 - [Slides](./Game_Theory.pdf)
 - [Exercise Sheet](./Game_Theory_Exercise_Sheet.pdf)
 - [Exercise Sheet Solution](./Game_Theory_Exercise_Sheet_Solutions.pdf)
-- [Sage Lab Sheet](./Sage_Interact_Sheet.pdf)
-- [Sage Lab Sheet Solution](./Sage_Interact_Sheet_Solutions.pdf)
+- [Sage Lab Sheet](./Sage_Lab_Sheet.pdf)
